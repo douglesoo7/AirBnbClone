@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.masai.airbnbappclone.ui.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_exploreFragment"
+            app:destination="@id/exploreFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.masai.airbnbappclone.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_confirmOTPFragment"
+            app:destination="@id/confirmOTPFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_addInfoFragment"
+            app:destination="@id/addInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmOTPFragment"
+        android:name="com.masai.airbnbappclone.ui.ConfirmOTPFragment"
+        android:label="fragment_confirm_o_t_p"
+        tools:layout="@layout/fragment_confirm_o_t_p">
+        <action
+            android:id="@+id/action_confirmOTPFragment_to_addInfoFragment"
+            app:destination="@id/addInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/confirmOTPFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_confirmOTPFragment_to_exploreFragment2"
+            app:destination="@id/exploreFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addInfoFragment"
+        android:name="com.masai.airbnbappclone.ui.AddInfoFragment"
+        android:label="fragment_add_info"
+        tools:layout="@layout/fragment_add_info">
+        <action
+            android:id="@+id/action_addInfoFragment_to_termsAndConditionsFragment"
+            app:destination="@id/termsAndConditionsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/addInfoFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsAndConditionsFragment"
+        android:name="com.masai.airbnbappclone.ui.TermsAndConditionsFragment"
+        android:label="fragment_terms_and_conditions"
+        tools:layout="@layout/fragment_terms_and_conditions">
+        <action
+            android:id="@+id/action_termsAndConditionsFragment_to_exploreFragment"
+            app:destination="@id/exploreFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/termsAndConditionsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.masai.airbnbappclone.ui.ExploreFragment"
+        android:label="fragment_explore"
+        tools:layout="@layout/fragment_explore">
+        <action
+            android:id="@+id/action_exploreFragment_to_hostPart1Fragment"
+            app:destination="@id/hostPart1Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_exploreFragment_to_placesFragment"
+            app:destination="@id/placesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.masai.airbnbappclone.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/tripsFragment"
+        android:name="com.masai.airbnbappclone.ui.TripsFragment"
+        android:label="fragment_trips"
+        tools:layout="@layout/fragment_trips" />
+    <fragment
+        android:id="@+id/wishlistsFragment"
+        android:name="com.masai.airbnbappclone.ui.WishlistsFragment"
+        android:label="fragment_wishlists"
+        tools:layout="@layout/fragment_wishlists">
+        <action
+            android:id="@+id/action_wishlistsFragment_to_placeDetailsFragment"
+            app:destination="@id/placeDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="com.masai.airbnbappclone.ui.InboxFragment"
+        android:label="fragment_inbox"
+        tools:layout="@layout/fragment_inbox" />
+    <fragment
+        android:id="@+id/hostPart1Fragment"
+        android:name="com.masai.airbnbappclone.ui.HostPart1Fragment"
+        android:label="fragment_host_part1"
+        tools:layout="@layout/fragment_host_part1">
+        <action
+            android:id="@+id/action_hostPart1Fragment_to_hostPart2Fragment"
+            app:destination="@id/hostPart2Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/hostPart3Fragment"
+        android:name="com.masai.airbnbappclone.ui.HostPart3Fragment"
+        android:label="fragment_host_part3"
+        tools:layout="@layout/fragment_host_part3">
+        <action
+            android:id="@+id/action_hostPart3Fragment_to_hostPart4Fragment"
+            app:destination="@id/hostPart4Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/hostPart4Fragment"
+        android:name="com.masai.airbnbappclone.ui.HostPart4Fragment"
+        android:label="fragment_host_part4"
+        tools:layout="@layout/fragment_host_part4">
+        <action
+            android:id="@+id/action_hostPart4Fragment_to_hostPart5Fragment"
+            app:destination="@id/hostPart5Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/hostPart2Fragment"
+        android:name="com.masai.airbnbappclone.ui.HostPart2Fragment"
+        android:label="HostPart2Fragment">
+        <action
+            android:id="@+id/action_hostPart2Fragment_to_hostPart3Fragment"
+            app:destination="@id/hostPart3Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/hostPart5Fragment"
+        android:name="com.masai.airbnbappclone.ui.HostPart5Fragment"
+        android:label="fragment_host_part5"
+        tools:layout="@layout/fragment_host_part5">
+        <action
+            android:id="@+id/action_hostPart5Fragment_to_hostPart6Fragment"
+            app:destination="@id/hostPart6Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/hostPart6Fragment"
+        android:name="com.masai.airbnbappclone.ui.HostPart6Fragment"
+        android:label="fragment_host_part6"
+        tools:layout="@layout/fragment_host_part6">
+        <action
+            android:id="@+id/action_hostPart6Fragment_to_hostPart7Fragment"
+            app:destination="@id/hostPart7Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/hostPart7Fragment"
+        android:name="com.masai.airbnbappclone.ui.HostPart7Fragment"
+        android:label="fragment_host_part7"
+        tools:layout="@layout/fragment_host_part7">
+        <action
+            android:id="@+id/action_hostPart7Fragment_to_myHostPlacesFragment"
+            app:destination="@id/myHostPlacesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/myHostPlacesFragment"
+        android:name="com.masai.airbnbappclone.ui.MyHostPlacesFragment"
+        android:label="fragment_my_host_places"
+        tools:layout="@layout/fragment_my_host_places">
+        <action
+            android:id="@+id/action_myHostPlacesFragment_to_exploreFragment"
+            app:destination="@id/exploreFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/myHostPlacesFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/placesFragment"
+        android:name="com.masai.airbnbappclone.ui.PlacesFragment"
+        android:label="fragment_places"
+        tools:layout="@layout/fragment_places">
+        <action
+            android:id="@+id/action_placesFragment_to_placeDetailsFragment"
+            app:destination="@id/placeDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeDetailsFragment"
+        android:name="com.masai.airbnbappclone.ui.PlaceDetailsFragment"
+        android:label="fragment_place_details"
+        tools:layout="@layout/fragment_place_details">
+        <action
+            android:id="@+id/action_placeDetailsFragment_to_invoiceFragment"
+            app:destination="@id/invoiceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/invoiceFragment"
+        android:name="com.masai.airbnbappclone.ui.InvoiceFragment"
+        android:label="InvoiceFragment" />
+</navigation>
